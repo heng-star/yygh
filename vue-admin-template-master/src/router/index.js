@@ -62,7 +62,7 @@ export const constantRouterMap = [
         name: 'EduTeacherEdit',
         component: () => import('@/views/hospSet/add'),
         meta: { title: '编辑修改', icon: 'tree' },
-        hidden:true
+        hidden: true
       },
 
       {
@@ -78,7 +78,7 @@ export const constantRouterMap = [
         component: () => import('@/views/hosp/show'),
         meta: { title: '查看', noCache: true },
         hidden: true
-    
+
       },
 
       {
@@ -88,7 +88,7 @@ export const constantRouterMap = [
         meta: { title: '排班', noCache: true },
         hidden: true
       }
-      
+
 
     ]
   },
@@ -107,12 +107,47 @@ export const constantRouterMap = [
         component: () => import('@/views/dict/list'),
         meta: { title: '医院字典', icon: 'table' }
       },
-           
+
 
     ]
   },
 
-  
+  {
+    path: '/user',
+    component: Layout,
+    redirect: '/user/userInfo/list',
+    name: 'userInfo',
+    meta: { title: '用户管理', icon: 'table' },
+    alwaysShow: true,
+    children: [
+      {
+        path: 'userInfo/list',
+        name: '用户列表',
+        component: () => import('@/views/user/userInfo/list'),
+        meta: { title: '用户列表', icon: 'table' }
+      },
+
+      {
+        path: 'userInfo/show/:id',
+        name: '用户查看',
+        component: () => import('@/views/user/userInfo/show'),
+        meta: { title: '用户查看' },
+        hidden: true
+      },
+
+      {
+        path: 'userInfo/authList',
+        name: '认证审批列表',
+              component: () =>import('@/views/user/userInfo/authList'),
+        meta: { title: '认证审批列表', icon: 'table' }
+      }
+      
+
+    ]
+  },
+
+
+
 
   {
     path: '/form',

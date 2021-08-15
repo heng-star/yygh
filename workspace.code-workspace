@@ -2,10 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"name": "yygh-front-end-web",
-			"path": "yygh-front-end-web"
 		}
 	],
 	"settings": {}
