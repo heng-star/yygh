@@ -14,5 +14,12 @@ export default {
       url: `${api_name}/queryPayStatus/${orderId}`,
       method: 'get'
     })
-  }
+  },
+  cancelOrder(orderId) {
+    return request({
+      url: `/api/order/orderInfo/auth/cancelOrder/${orderId}`,
+      method: 'get'
+    })
+  },
+
 }
